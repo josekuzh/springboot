@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>E-Shopper</title>
+<title>E-Shopper Capgemini</title>
 <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
 <link rel="stylesheet" type="text/css"
 	th:href="@{/font-awesome.min.css}" />
@@ -22,8 +22,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Admin Login</a></li>
-								<li><a href="/loginauth"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -33,24 +32,65 @@
 	</header>
 <br/><br/><br/><br/><br/>
 <h5 th:utext="${message}"></h5>
+	<h1 align="center">Log In</h1>
+	
+	<table align = "center" cellpadding = "50">
+	<tr>
+	
+	<td>
 	<form action="/adminlog" method="post">
-		<table align="center" width="400" height="150">
+		<table align="left" width="400" height="150">
 			<tr>
-				<th height="60"><font size="6">Admin Login</font></th>
+				<th height="60"><font size="5">LOGIN</font></th>
 			</tr>
 			<tr>
-				<th height="60"><font size="4">Admin UserName :</font></th>
-				<th><input type="text" name="username" /></th>
+				<td height="60"><font size="4">UserName :</font></td>
+				<td><input type="text" name="username" /></td>
 			</tr>
 			<tr>
-				<th height="60"><font size="4">Password :</font></th>
-				<th><input type="password" name="password" /></th>
+				<td height="60"><font size="4">Password :</font></td>
+				<td><input type="password" name="password" /></td>
 			</tr>
-			<tr><th></th>
-				<th><input type="submit" value="Login" /></th>
+			<tr>
+				<td colspan="2"><button type="submit"><img th:src="@{/images/Login.png}" /></button></td>
 			</tr>
 		</table>
 	</form>
+	</td>
+	
+	<td>
+	<table align ="right" cellpadding ="6">
+		<tr>
+			<th height="60"><font size="5">LOGON USING SOCIAL ACCOUNT</font></th>
+		</tr>
+		<tr>
+			<td><img th:src="@{/images/Github.png}" /></td>
+			<td><img th:src="@{/images/Facebook.png}" /></td>
+		</tr>
+		<tr>
+			<td><img th:src="@{/images/Stack.png}" /></td>
+			<td><img th:src="@{/images/Google.png}" /></td>
+		</tr>
+		<tr>
+		
+			<td>
+			<form action="/connect/linkedin" method="POST">
+				<input type="hidden" name="scope" value="r_basicprofile,r_emailaddress" />
+				<button type="submit"><img th:src="@{/images/Linkedin.png}" />
+				</button>
+			</form>
+			</td>
+			<td><img th:src="@{/images/Microsoft.png}" /></td>
+		</tr>
+		<tr>
+			<td><img th:src="@{/images/Twitter.png}" /></td>
+			<td><img th:src="@{/images/Jboss.png}" /></td>
+		</tr>
+	</table>
+	</td>
+	
+	</tr>
+	</table>
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	<th:block th:include="_footer"></th:block>
 </body>

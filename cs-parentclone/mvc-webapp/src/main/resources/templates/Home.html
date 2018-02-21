@@ -22,8 +22,8 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Admin Login</a></li>
-								<li><a href="/loginauth"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Login</a></li>
+								
 							</ul>
 						</div>
 					</div>
@@ -100,8 +100,7 @@
 								<div class="product-image-wrapper">
 									<div class="">
 										<div class="productinfo text-center">
-											<a th:href="@{/product(productName=${cat.productName},productIdChild=${cat.productIdChild},
-											price=${cat.price})}"><h2 th:utext="${cat.productName}"></h2></a>
+											<h2 th:utext="${cat.productName}"></h2>
 											<p th:utext="'Price: '+${cat.price}"></p>
 											<p th:utext="'Code: '+${cat.productIdChild}"></p>
 											<a href="/loginauth" class="btn btn-default add-to-cart"><i
