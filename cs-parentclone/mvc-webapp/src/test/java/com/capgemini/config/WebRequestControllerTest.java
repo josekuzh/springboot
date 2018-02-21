@@ -572,7 +572,7 @@ public class WebRequestControllerTest {
 		User bean=new User();
 		bean.setFirstName("XYZ");
 		Mockito.when(linkedInProvider.populateUserDetailsFromLinkedIn()).thenReturn(bean);
-		webRequestController.showCheckoutPage("", "", "", "", map);
+		webRequestController.showCheckoutPage("", "", "","", map);
 	}
 	
 	@Test

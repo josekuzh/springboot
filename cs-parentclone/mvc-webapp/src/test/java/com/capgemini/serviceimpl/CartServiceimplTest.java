@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.jxpath.ri.model.beans.NullPointer;
 import org.junit.*;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

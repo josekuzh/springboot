@@ -27,7 +27,7 @@ public class OnlineShopingApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(OnlineShopingApplication.class, args);
 		logger.info("Main call");
-		
+		int i='A';
 	}
 	
 	@Bean

@@ -15,6 +15,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+	com.capgemini.bean.TestAll.class,
 	com.capgemini.config.TestAll.class,
 	com.capgemini.constant.TestAll.class,
 	com.capgemini.serviceimpl.TestAll.class,
