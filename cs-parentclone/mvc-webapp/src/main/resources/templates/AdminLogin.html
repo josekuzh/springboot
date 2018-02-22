@@ -10,49 +10,51 @@
 </head>
 <body>
 <!-- <th:block th:include="/HomeHeader"></th:block> -->
-<header id="header">
-		<div class="header-middle">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a href="/home"><img th:src="@{/images/logo.jpg}" /></a>
-						</div>
-					</div>
-					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Login</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-<br/><br/><br/><br/><br/>
+<!-- <header id="header"> -->
+<!-- 		<div class="header-middle"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-sm-4"> -->
+<!-- 						<div class="logo pull-left"> -->
+<!-- 							<a href="/home"><img th:src="@{/images/logo.jpg}" /></a> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-sm-8"> -->
+<!-- 						<div class="shop-menu pull-right"> -->
+<!-- 							<ul class="nav navbar-nav"> -->
+<!-- 								<li><a href="/adminlogin"><i class="fa fa-lock"></i>Login</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</header> -->
+<br/><br/>
 <h5 th:utext="${message}"></h5>
-	<h1 align="center">Log In</h1>
-	
+<!-- 	<h1 align="center"><font face="Times New Roman">LOGIN</font></h1> -->
+	<div align="center">
+	<a href="/home"><img th:src="@{/images/logo.jpg}" /></a>
+	</div>
 	<table align = "center" cellpadding = "50">
 	<tr>
 	
 	<td>
 	<form action="/adminlog" method="post">
-		<table align="left" width="400" height="150">
+		<table align="left" width="400" height="150" >
 			<tr>
-				<th height="60"><font size="5">LOGIN</font></th>
+				<td colspan="2" align="center" height="60"><font size="5" face="Times New Roman"><b>LOGIN</b></font></td>
 			</tr>
 			<tr>
-				<td height="60"><font size="4">UserName :</font></td>
-				<td><input type="text" name="username" /></td>
+				<td height="60" align="center"><font size="4" face="Times New Roman">Username :</font></td>
+				<td align="center"><input type="text" name="username" /></td>
 			</tr>
 			<tr>
-				<td height="60"><font size="4">Password :</font></td>
-				<td><input type="password" name="password" /></td>
+				<td height="60" align="center"><font size="4" face="Times New Roman">Password :</font></td>
+				<td align="center"><input type="password" name="password" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><button style="border: none;" type="submit"><img th:src="@{/images/Login.png}" /></button></td>
+				<td colspan="2"><button style="border:none;padding:0px 0px 0px 0px;" type="submit"><img th:src="@{/images/Login.png}" /></button></td>
 			</tr>
 		</table>
 	</form>
@@ -61,7 +63,7 @@
 	<td>
 	<table align ="right" cellpadding ="6">
 		<tr>
-			<th height="60"><font size="5">LOGON USING SOCIAL ACCOUNT</font></th>
+			<td colspan="2" align="center" height="60"><font face="Times New Roman" size="5"><b>LOGIN USING SOCIAL ACCOUNT</b></font></td>
 		</tr>
 		<tr>
 			<td><img th:src="@{/images/Github.png}" /></td>
@@ -76,7 +78,7 @@
 			<td>
 			<form action="/connect/linkedin" method="POST">
 				<input type="hidden" name="scope" value="r_basicprofile,r_emailaddress" />
-				<button style="border: none;" type="submit"><img th:src="@{/images/Linkedin.png}" />
+				<button style="border:none;padding:0px 0px 0px 0px;" type="submit"><img th:src="@{/images/Linkedin.png}" />
 				</button>
 			</form>
 			</td>
@@ -91,7 +93,7 @@
 	
 	</tr>
 	</table>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/>
 	<th:block th:include="_footer"></th:block>
 </body>
 </html>
